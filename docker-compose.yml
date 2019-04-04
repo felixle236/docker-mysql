@@ -26,6 +26,7 @@ services:
             - mysql
         networks:
             - webnet
+        restart: always
 
 networks:
     webnet:

@@ -1,3 +1,6 @@
 .env
 ._data
+.idea
+.history
+.DS_Store
 data/
