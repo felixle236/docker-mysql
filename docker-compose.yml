@@ -10,6 +10,7 @@ services:
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
         volumes:
             - ./data:/var/lib/mysql
+            - ./config:/etc/mysql/conf.d
         networks:
             - webnet
         restart: always
