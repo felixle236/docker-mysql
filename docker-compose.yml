@@ -18,11 +18,12 @@ services:
     phpmyadmin:
         container_name: phpmyadmin
         image: phpmyadmin/phpmyadmin
-        environment:
-            PMA_HOST: mysql
-            PHP_UPLOAD_MAX_FILESIZE: 100MB
         ports:
             - ${ADMIN_PORT}:80
+        environment:
+            PMA_HOST: mysql
+        volumes:
+            - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
         depends_on:
             - mysql
         networks:
