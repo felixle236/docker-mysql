@@ -23,7 +23,7 @@ services:
         environment:
             PMA_HOST: mysql
         volumes:
-            - ./uploads.ini:/usr/local/etc/php/conf.d
+            - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
         depends_on:
             - mysql
         networks:
